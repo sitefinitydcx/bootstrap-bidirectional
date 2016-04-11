@@ -1,0 +1,21 @@
+﻿/*#region bi-directional helpers */
+/*#endregion */
+/*#region positioning */
+/*#endregion */
+/*#region margins and paddings */
+/*#endregion */
+/*#region borders and radius */
+/*#endregion */
+/*#region misc */
+/*#endregion */
+/*#region todo */
+/*#endregion */
+[dir="ltr"] .testclass {
+  border-left-width: 1px;
+}
+
+[dir="rtl"] .testclass {
+  border-right-width: 1px;
+}
+
+/*# sourceMappingURL=test.css.map */

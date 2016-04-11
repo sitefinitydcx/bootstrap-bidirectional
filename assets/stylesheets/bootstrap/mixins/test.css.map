@@ -1,0 +1,10 @@
+﻿{
+	"version": 3,
+	"file": "test.css",
+	"sources": [
+		"test.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "AACA,mCAAmC;AA2MnC,eAAe;AAEf,wBAAwB;AA0BxB,eAAe;AACf,iCAAiC;AA8BjC,eAAe;AACf,+BAA+B;AAmE/B,eAAe;AACf,iBAAiB;AAWjB,eAAe;AAEf,iBAAiB;AAKjB,eAAe;CApNK,AAAA,GAAC,CAAI,KAAK,AAAT,EAAW,UAAU,CAApB;EACV,iBAAsD,EA0OnC,GAAG;CA3OX;;CAQH,AAAA,GAAC,CAAI,KAAK,AAAT,EAAW,UAAU,CAApB;EACV,kBAA0D,EAkOvC,GAAG;CAnOX",
+	"names": []
+}
