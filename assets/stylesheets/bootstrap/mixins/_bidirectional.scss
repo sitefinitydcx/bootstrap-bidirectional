@@ -349,36 +349,3 @@ $tfl: ();
 // box-shadow
 // perspective-origin
 /*#endregion */
-
-// one variable that determines build/compilation (should be 'left', 'right' or 'bidi')
-$text-direction: "bidi";
-
-.testclass {
-    // css properties with 'left' become 'push' (pushing against the box-model)
-    // css properties with 'right' become 'pull' (pulling away from the box-model)
-
-    //@include clear(left);
-    //@include float(left);
-    //@include text-align(left);
-    //@include push(0); // 
-    //@include pull(10px);
-    //@include padding-push(10px);
-    //@include padding-pull(5px);
-    //@include padding-horz(5px, 6px);
-    //@include margin-push(5px);
-    //@include margin-pull(5px);
-    //@include margin-horz(5px, 6px);
-    //@include border-push(1px solid);
-    //@include border-push-color(red);
-    //@include border-push-style(solid);
-    //@include border-push-width(1px);
-    //@include border-pull(1px solid, 2px dashed);
-    //@include border-pull-color(red, blue);
-    //@include border-pull-style(solid, dotted);
-    //@include border-pull-width(1px, 2px);
-    //@include border-top-push-radius(2px 1px);
-    //@include border-top-pull-radius(2px 1px);
-    //@include border-bottom-push-radius(2px 1px);
-    //@include border-bottom-pull-radius(2px 1pxm);
-    //@include background-position(20%, 50%);
-}
