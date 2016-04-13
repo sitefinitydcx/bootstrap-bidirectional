@@ -1,5 +1,5 @@
 # bootstrap-bidirectional
-> Bi-directional Bootstrap SASS port supporting ltr, rtl and bidi without the need of alternative stylesheets or double-targetting styles.
+> Bi-directional Bootstrap SASS port supporting ltr, rtl and bidi without the need of alternative stylesheets or overriding styles but a clean and flexible approach.
 
 ## Features
 
@@ -58,7 +58,7 @@ For all others, `left` become `push` (pushing against the box-model) and `right`
 ```
 
 ### Sample input
-The following example shows the output of below sass (for example purposes, variable is scoped).
+The following example shows the output of below sass (for example purposes, variable is scoped within the class).
 
 ```
 .testleft {
