@@ -134,7 +134,7 @@ th {
 
 table col[class*="col-"] {
   position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
-  float: none;
+  @include float(none); //float: none;
   display: table-column;
 }
 table {
@@ -142,7 +142,7 @@ table {
   th {
     &[class*="col-"] {
       position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
-      float: none;
+      @include float(none); //float: none;
       display: table-cell;
     }
   }

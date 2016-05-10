@@ -20,13 +20,13 @@
       position: relative;
       display: block;
       padding: $nav-link-padding;
+
       &:hover,
       &:focus {
         text-decoration: none;
         background-color: $nav-link-hover-bg;
       }
     }
-
     // Disabled state sets text to gray and nukes hover/tab effects
     &.disabled > a {
       color: $nav-disabled-link-color;
@@ -40,7 +40,6 @@
       }
     }
   }
-
   // Open dropdowns
   .open > a {
     &,
@@ -50,7 +49,6 @@
       border-color: $link-color;
     }
   }
-
   // Nav dividers (deprecated with v3.0.1)
   //
   // This should have been removed in v3 with the dropping of `.nav-list`, but
@@ -59,7 +57,6 @@
   .nav-divider {
     @include nav-divider;
   }
-
   // Prevent IE8 from misplacing imgs
   //
   // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
@@ -75,22 +72,22 @@
 // Give the tabs something to sit on
 .nav-tabs {
   border-bottom: 1px solid $nav-tabs-border-color;
+
   > li {
     @include float(left); // float: left;
     // Make the list-items overlay the bottom border
     margin-bottom: -1px;
-
     // Actual tabs (as links)
     > a {
-      @include margin-pull(2px); // margin-right: 2px;
+      @include margin-pull(2px); //margin-right: 2px;
       line-height: $line-height-base;
       border: 1px solid transparent;
       border-radius: $border-radius-base $border-radius-base 0 0;
+
       &:hover {
         border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
       }
     }
-
     // Active state, and its :hover to override normal :hover
     &.active > a {
       &,
@@ -117,15 +114,14 @@
 .nav-pills {
   > li {
     @include float(left); // float: left;
-
     // Links rendered as pills
     > a {
       border-radius: $nav-pills-border-radius;
     }
+
     + li {
       @include margin-push(2px); // margin-left: 2px;
     }
-
     // Active state
     &.active > a {
       &,
@@ -143,6 +139,7 @@
 .nav-stacked {
   > li {
     float: none;
+
     + li {
       margin-top: 2px;
       @include margin-push(0); // margin-left: 0; // no need for this gap between nav items
@@ -162,6 +159,7 @@
 
   > li {
     float: none;
+
     > a {
       text-align: center;
       margin-bottom: 5px;
@@ -170,13 +168,14 @@
 
   > .dropdown .dropdown-menu {
     top: auto;
-    @include push(auto); // left: auto;
+    @include push(0); // left: auto;
   }
 
   @media (min-width: $screen-sm-min) {
     > li {
       display: table-cell;
       width: 1%;
+
       > a {
         margin-bottom: 0;
       }
@@ -207,6 +206,7 @@
       border-bottom: 1px solid $nav-tabs-justified-link-border-color;
       border-radius: $border-radius-base $border-radius-base 0 0;
     }
+
     > .active > a,
     > .active > a:hover,
     > .active > a:focus {
@@ -224,6 +224,7 @@
   > .tab-pane {
     display: none;
   }
+
   > .active {
     display: block;
   }

@@ -18,23 +18,25 @@
   overflow: hidden;
   position: fixed;
   top: 0;
-  bottom: 0;
   // right: 0;
-  @include position-horz(0, 0); // left: 0;
+  bottom: 0;
+  @include position-horz(0); // left: 0;
   z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
-
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     @include translate(0, -25%);
     @include transition-transform(0.3s ease-out);
   }
-  &.in .modal-dialog { @include translate(0, 0) }
+
+  &.in .modal-dialog {
+    @include translate(0, 0)
+  }
 }
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -64,14 +66,19 @@
 .modal-backdrop {
   position: fixed;
   top: 0;
-  bottom: 0;
   // right: 0;
-  @include position-horz(0, 0); // left: 0;
+  bottom: 0;
+  @include position-horz(0); // left: 0;
   z-index: $zindex-modal-background;
   background-color: $modal-backdrop-bg;
   // Fade for backdrop
-  &.fade { @include opacity(0); }
-  &.in { @include opacity($modal-backdrop-opacity); }
+  &.fade {
+    @include opacity(0);
+  }
+
+  &.in {
+    @include opacity($modal-backdrop-opacity);
+  }
 }
 
 // Modal header
@@ -79,7 +86,7 @@
 .modal-header {
   padding: $modal-title-padding;
   border-bottom: 1px solid $modal-header-border-color;
-  min-height: ($modal-title-padding + $modal-title-line-height);
+  @include clearfix;
 }
 // Close icon
 .modal-header .close {
@@ -102,10 +109,9 @@
 // Footer (for actions)
 .modal-footer {
   padding: $modal-inner-padding;
-  @include text-align(right); // // text-align: right; // right align buttons
+  @include text-align(right); // text-align: right; // right align buttons
   border-top: 1px solid $modal-footer-border-color;
   @include clearfix; // clear it in case folks use .pull-* classes on buttons
-
   // Properly space out buttons
   .btn + .btn {
     @include margin-push(5px); // margin-left: 5px;
@@ -137,14 +143,19 @@
     width: $modal-md;
     margin: 30px auto;
   }
+
   .modal-content {
     @include box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 
   // Modal sizes
-  .modal-sm { width: $modal-sm; }
+  .modal-sm {
+    width: $modal-sm;
+  }
 }
 
 @media (min-width: $screen-md-min) {
-  .modal-lg { width: $modal-lg; }
+  .modal-lg {
+    width: $modal-lg;
+  }
 }

@@ -8,10 +8,10 @@
   display: inline-block;
   width: 0;
   height: 0;
-  @include margin-push(2px); // margin-left: 2px;
+  @include margin-push(2px); //margin-left: 2px;
   vertical-align: middle;
-  border-top:   $caret-width-base dashed;
-  border-top:   $caret-width-base solid \9; // IE8
+  border-top: $caret-width-base dashed;
+  border-top: $caret-width-base solid \9; // IE8
   @include border-pull($caret-width-base solid transparent); // border-right: $caret-width-base solid transparent;
   @include border-push($caret-width-base solid transparent); // border-left:  $caret-width-base solid transparent;
 }
@@ -31,23 +31,22 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  @include push(0); // left: 0;
+  @include margin-pull(0); //left: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
-  @include float(left); // float: left;
+  @include float(left); //float: left;
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
-  @include text-align(left); // text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
   border: 1px solid $dropdown-fallback-border; // IE8 fallback
   border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
   @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
-
   // Aligns the dropdown menu to right
   //
   // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
@@ -55,12 +54,10 @@
     // right: 0;
     @include position-horz(auto, 0); // left: auto;
   }
-
   // Dividers (basically an hr) within the dropdown
   .divider {
     @include nav-divider($dropdown-divider-bg);
   }
-
   // Links within the dropdown menu
   > li > a {
     display: block;
@@ -105,7 +102,6 @@
   &:focus {
     color: $dropdown-link-disabled-color;
   }
-
   // Nuke hover/focus effects
   &:hover,
   &:focus {
@@ -123,7 +119,6 @@
   > .dropdown-menu {
     display: block;
   }
-
   // Remove the outline when :focus is triggered
   > a {
     outline: 0;
@@ -136,7 +131,7 @@
 // menu with the parent.
 .dropdown-menu-right {
   // left: auto; // Reset the default from `.dropdown-menu`
-  @include position-horz(auto, 0); // right: 0;
+  @include position-horz(auto, 0); //right: 0;
 }
 // With v3, we enabled auto-flipping if you have a dropdown within a right
 // aligned nav component. To enable the undoing of that, we provide an override
@@ -146,7 +141,7 @@
 // `.pull-right` nav component.
 .dropdown-menu-left {
   // left: 0;
-  @include position-horz(0, auto); // right: auto;
+  @include position-horz(0, auto); //right: auto;
 }
 
 // Dropdown section headers
@@ -163,7 +158,7 @@
 .dropdown-backdrop {
   position: fixed;
   // left: 0;
-  @include position-horz(0, 0); // right: 0;
+  @include position-horz(0); //right: 0;
   bottom: 0;
   top: 0;
   z-index: ($zindex-dropdown - 10);
@@ -205,14 +200,16 @@
 @media (min-width: $grid-float-breakpoint) {
   .navbar-right {
     .dropdown-menu {
-      // right: 0; 
-      @include position-horz(auto, 0); // left: auto;
+      // right: 0;
+      // left: auto;
+      @include position-horz(auto, 0); //
     }
     // Necessary for overrides of the default right aligned menu.
     // Will remove come v4 in all likelihood.
     .dropdown-menu-left {
-      // left: 0; 
-      @include position-horz(0, auto); // right: auto;
+      // left: 0;
+      // right: auto;
+      @include position-horz(0, auto); //
     }
   }
 }

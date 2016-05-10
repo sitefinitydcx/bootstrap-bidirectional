@@ -7,7 +7,7 @@
 - No style-sheet swapping when using Bi-directional support.
 - No additional output when choosing LTR, minimal file-size growth on RTL/Bi-directional selection.
 - Built upon [bootstrap SASS] (https://github.com/twbs/bootstrap-sass) enhanced with bi-directional functionality for LTR and RTL language support. 
-- Fully compatible with [TWBS](http://getbootstrap.com/) `v.3.3.5`
+- Fully compatible with [TWBS](http://getbootstrap.com/) `v.3.3.6`
 
 ![Sample output file](https://raw.githubusercontent.com/jbokkers/bootstrap-bidirectional/master/output.png)
 

@@ -39,12 +39,13 @@
   .btn,
   .btn-group,
   .input-group {
-    @include float(left); // float: left;
+    @include float(left); //float: left;
   }
+
   > .btn,
   > .btn-group,
   > .input-group {
-    @include margin-push(5px); // margin-left: 5px;
+    @include margin-push(5px); //margin-left: 5px;
   }
 }
 
@@ -69,15 +70,18 @@
 .btn-group > .btn-group {
   @include float(left); // float: left;
 }
+
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
+
 .btn-group > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
   > .dropdown-toggle {
     @include border-right-radius(0);
   }
 }
+
 .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
   @include border-left-radius(0);
 }
@@ -93,9 +97,17 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-xs > .btn { @extend .btn-xs; }
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+.btn-group-xs > .btn {
+  @extend .btn-xs;
+}
+
+.btn-group-sm > .btn {
+  @extend .btn-sm;
+}
+
+.btn-group-lg > .btn {
+  @extend .btn-lg;
+}
 
 
 // Split button dropdowns
@@ -104,20 +116,18 @@
 // Give the line between buttons some depth
 .btn-group > .btn + .dropdown-toggle {
   // padding-left: 8px;
-  // padding-right: 8px;
-  @include padding-horz(8px); 
+  @include padding-horz(8px); //padding-right: 8px;
 }
+
 .btn-group > .btn-lg + .dropdown-toggle {
   // padding-left: 12px;
-  // padding-right: 12px;
-  @include padding-horz(12px); 
+  @include padding-horz(8px); // padding-right: 12px;
 }
 
 // The clickable button for toggling the menu
 // Remove the gradient and set the same inset shadow as the :active state
 .btn-group.open .dropdown-toggle {
   @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-
   // Show no shadow for `.btn-link` since it has no other button styles.
   &.btn-link {
     @include box-shadow(none);
@@ -152,10 +162,10 @@
     width: 100%;
     max-width: 100%;
   }
-
   // Clear floats so dropdown menus can be properly placed
   > .btn-group {
     @include clearfix;
+
     > .btn {
       float: none;
     }
@@ -174,24 +184,29 @@
   &:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
+
   &:first-child:not(:last-child) {
-    border-top-right-radius: $btn-border-radius-base;
+    @include border-top-radius($btn-border-radius-base);
     @include border-bottom-radius(0);
   }
+
   &:last-child:not(:first-child) {
-    border-bottom-left-radius: $btn-border-radius-base;
     @include border-top-radius(0);
+    @include border-bottom-radius($btn-border-radius-base);
   }
 }
+
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
+
 .btn-group-vertical > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
   > .dropdown-toggle {
     @include border-bottom-radius(0);
   }
 }
+
 .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
   @include border-top-radius(0);
 }
@@ -205,12 +220,14 @@
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
+
   > .btn,
   > .btn-group {
     float: none;
     display: table-cell;
     width: 1%;
   }
+
   > .btn-group .btn {
     width: 100%;
   }

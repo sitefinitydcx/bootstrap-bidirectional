@@ -3,5 +3,6 @@
 @mixin center-block() {
   display: block;
   // margin-left: auto;
-  @include margin-horz(auto, auto); // margin-right: auto;
+  // margin-right: auto;
+  @include margin-horz(auto, auto);
 }
