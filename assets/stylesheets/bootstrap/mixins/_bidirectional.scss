@@ -66,6 +66,8 @@ $tfl: ();
     }
   }
   @else if $tfb == "true" {
+    $propertydirection: "left";
+
     [dir="ltr"] & {
       #{$property}-#{$propertydirection}: $var1;
 
@@ -85,7 +87,7 @@ $tfl: ();
   @else {
     #{$property}-#{$propertydirection}: $var1;
 
-    @if $propertydirection == "bidi" and $var2 != $var1 {
+    @if $var2 != $var1 {
       #{$property}-#{od($propertydirection)}: $var2;
     }
   }
@@ -205,6 +207,8 @@ $tfl: ();
 @mixin bidi6($property, $propertydirection, $var1, $var2, $var3, $var4, $direction: tfd($text-direction) ) {
   // helper to calculate opposite properties for margin- or padding-
   @if $tfb == "true" {
+    $propertydirection: "left";
+
     [dir="ltr"] & {
       #{$property}: $var1 $var2 $var3 $var4;
     }
