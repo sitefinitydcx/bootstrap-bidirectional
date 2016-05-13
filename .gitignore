@@ -1,0 +1,15 @@
+*.gem
+*.lock
+*.user
+*.map
+*.gzip
+*.suo
+.DS_Store
+.sass-cache
+.vs
+bootstrap.css
+bootstrap-responsive.css
+node_modules
+obj
+Thumbs.db
+tmp
