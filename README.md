@@ -119,20 +119,20 @@ The output generated:
     ```
     - DO Create if not already a `main.js` in your project's `/client` directory, and append the following code in it:
     ```
-        import 'bootstrap-bidirectional';
+        import 'bootstrap-bidirectional'; //seems not working or not needed . correct me
     ```
     Voila!
     Now by triggering a jquery (meteor has build in jquery) function in some place you desire, you can change the dir value of the `html` tag.
     Something like below:
     - In your `spacebars` template:
-    ```
+```
         <template name="changeHTMLdir">
             <button class="js-change-dir-rlt">RTL</button>
             <button class="js-change-dir-ltr">LTR</button>
         </template>
-    ```
+```
     - In you template's events :
-    ```
+```
         Template.navbar.events({
             "click .js-change-dir-rlt": function(){
                 $('html').attr('dir','rtl');
@@ -141,5 +141,5 @@ The output generated:
                 $('html').attr('dir','ltr');
             },
         });
-    ```
+```
     - Now code you bootstrap web App with bidirectional support in Meteor.
