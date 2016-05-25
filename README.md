@@ -109,30 +109,30 @@ The output generated:
     - DO  open `_variables.scss` in `/node_modules/bootstrap-bidirectional/assets/stylesheets/bootstrap/_variables.scss`
             and change the value of '$text-direction' to 'bidi'.
     - DO   Create if not already  a `main.scss` in your project's `/client` directory, and input the following codes in it:
-    ...
+    ```
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/bootstrap/mixins/_bidirectional.scss';
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/bootstrap/_variables.scss';
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/_bootstrap-compass.scss';
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/_bootstrap-mincer.scss';
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/_bootstrap-sprockets.scss';
         @import '{}/node_modules/bootstrap-bidirectional/assets/stylesheets/_bootstrap.scss';
-    ...
+    ```
     - DO Create if not already a `main.js` in your project's `/client` directory, and append the following code in it:
-    ...
+    ```
         import 'bootstrap-bidirectional';
-    ...
+    ```
     Voila!
     Now by triggering a jquery (meteor has build in jquery) function in some place you desire, you can change the dir value of the `html` tag.
     Something like below:
     - In your `spacebars` template:
-    ...
+    ```
         <template name="changeHTMLdir">
             <button class="js-change-dir-rlt">RTL</button>
             <button class="js-change-dir-ltr">LTR</button>
         </template>
-    ...
+    ```
     - In you template's events :
-    ...
+    ```
         Template.navbar.events({
             "click .js-change-dir-rlt": function(){
                 $('html').attr('dir','rtl');
@@ -141,5 +141,5 @@ The output generated:
                 $('html').attr('dir','ltr');
             },
         });
-    ...
+    ```
     - Now code you bootstrap web App with bidirectional support in Meteor.
