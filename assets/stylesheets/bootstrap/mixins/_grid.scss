@@ -4,10 +4,11 @@
 
 // Centered container element
 @mixin container-fixed($gutter: $grid-gutter-width) {
-    @include margin-pull(auto); // margin-right: auto;
-    @include margin-push(auto); // margin-left: auto;
-    @include padding-push((floor(($gutter / 2)))); // padding-left:  floor(($gutter / 2));
-    @include padding-pull((ceil(($gutter / 2)))); // padding-right: ceil(($gutter / 2));
+    //the mixins are not needed here because we expect this to be centered for all dir's
+    margin-right: auto; //@include margin-pull(auto); //
+    margin-left: auto; //@include margin-push(auto); //
+    padding-left:  floor(($gutter / 2)); // @include padding-push((floor(($gutter / 2)))); //
+    padding-right: ceil(($gutter / 2)); //@include padding-pull((ceil(($gutter / 2)))); //
     @include clearfix;
 }
 
