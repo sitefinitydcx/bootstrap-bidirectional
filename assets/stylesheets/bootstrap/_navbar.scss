@@ -139,9 +139,10 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  // right: 0;
-  // left: 0;
-  @include position-horz(0); //
+  // in this case, left:0 and right:0 are correct as it makes the navbar full width
+  // so no need to use the padding-horz(0) mixin
+  right: 0;
+  left: 0;
   z-index: $zindex-navbar-fixed;
   // Undo the rounded corners
   @media (min-width: $grid-float-breakpoint) {
